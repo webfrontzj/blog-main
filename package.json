@@ -1,0 +1,11 @@
+{
+  "name": "blog-main",
+  "version": "1.0.0",
+  "description": "blog main app",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "zj",
+  "license": "ISC"
+}
