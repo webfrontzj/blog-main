@@ -18,5 +18,10 @@ app.use(cors());
 app.use(catchError);
 app.use(parser());
 
+InitManager.initCore(app);
 
+app.listen(3000,()=>{
+    console.log('Koa is listening in http://localhost:3000');
+});
 
+module.exports=app;
