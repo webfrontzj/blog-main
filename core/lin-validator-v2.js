@@ -111,7 +111,7 @@ class LinValidator{
 
     _assembleAllParams(ctx){
         return {
-            body:ctx.request.body,
+            body:Object.assign({},ctx.request.body,ctx.params),
             query:ctx.request.query,
             path:ctx.request.path,
             header:ctx.request.header
@@ -164,6 +164,7 @@ class LinValidator{
                 errorMsgs.push(result.msg);
             }
         }
+        
         if(errorMsgs.length != 0){
             throw new ParameterException(errorMsgs);
         }
@@ -234,6 +235,13 @@ class LinValidator{
             return {
                 value,
                 path: ['path', key]
+            }
+        }
+        value = get(this.data, ['params', key])
+        if (value) {
+            return {
+                value,
+                path: ['params', key]
             }
         }
         value = get(this.data, ['header', key])

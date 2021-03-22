@@ -20,8 +20,8 @@ app.use(parser());
 
 InitManager.initCore(app);
 
-app.listen(3000,()=>{
-    console.log('Koa is listening in http://localhost:3000');
+app.listen(3001,()=>{
+    console.log('Koa is listening in http://localhost:3001');
 });
 
 module.exports=app;

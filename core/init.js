@@ -25,7 +25,7 @@ class InitManager{
     }
     // 将config配置到global上
     static loadConfig(path = ''){
-        const configPath = path || process.cwd()+'/config/config.js';
+        const configPath = path || process.cwd()+'/config/index.js';
         const config=require(configPath);
         global.config=config;
     }
